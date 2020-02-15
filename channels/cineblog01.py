@@ -262,8 +262,7 @@ def findvid_serie(item):
     blktxt=""
     for b in blk:
         if b[0:3]=="a h" or b[0:4]=="<a h":
-            b="<%s>"%b
-            load_vid_series(b, item, itemlist, blktxt)
+            load_vid_series("<%s>"%b, item, itemlist, blktxt)
             blktxt=""
         elif len(b.strip())>1:
             blktxt=b.strip()
